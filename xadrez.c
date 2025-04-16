@@ -9,6 +9,7 @@
         // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
         int opcao;
+        int cavalo = 1;
 
         // Implementação de Movimentação do Bispo
         // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
@@ -18,28 +19,34 @@
                 printf("1. Bispo.\n");
                 printf("2. Torre.\n");
                 printf("3. Rainha.\n");
-                printf("4. Sair!\n");
+                printf("4. Cavalo.\n");
+                printf("5. Sair!\n");
                 printf("Escolha sua opção: \n");
                 scanf("%d", &opcao);
 
                 switch (opcao){
                     case 1:
+                        printf("\n");
                         printf("Você escolheu o Bispo!\n");
                         printf("Movendo 5 casas para Cima Direita!\n");                       
                             for (int i = 0; i < 5; i++) {
                                 printf("Cima Direita!\n");
-                            }                                                      
+                            }
+                        printf("\n");                                                       
                         break;
                     case 2:
+                        printf("\n");
                         printf("Você escolheu a Torre!\n");
                         printf("Movendo 5 casas a direita!\n");
                             int t = 1;
                             while (t <= 5) {
                                 printf("Direita!\n");
                                 t++;
-                            }                           
+                            }
+                        printf("\n");
                         break;
                     case 3:
+                        printf("\n");
                         printf("Você escolheu a Rainha!\n");
                         printf("Movendo 8 casas à esquerda!\n");
                             int r = 1;
@@ -47,10 +54,25 @@
                                 printf("Esquerda!\n");
                                 r++;
                             } while (r <= 8);
-                            
+                        printf("\n");   
                         break;
                     case 4:
+                        printf("\n");
+                        printf("Movendo o Cavalo!\n");
+                        while (cavalo--)
+                        {
+                            for (int i = 0; i < 2; i++)
+                            {
+                                printf("Cima\n");
+                            }
+                        printf("Direita\n");                            
+                        }
+                        printf("\n");
+                        break;
+                    case 5:
+                        printf("\n");
                         printf("Saindo do jogo!\n");
+                        printf("\n");
                         break;
                     default:
                         printf("Opção inválida!\n");             
@@ -58,7 +80,7 @@
                 } 
 
                                 
-            } while (opcao != 4);
+            } while (opcao != 5);
         return 0;
         }
         
