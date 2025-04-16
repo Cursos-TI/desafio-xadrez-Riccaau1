@@ -8,8 +8,6 @@
         // Nível Novato - Movimentação das Peças
         // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
-        int casasrainha, casasbispo, casastorre;   
-        int sentidorainha, sentidobispo, sentidotorre;
         int opcao;
 
         // Implementação de Movimentação do Bispo
@@ -27,40 +25,29 @@
                 switch (opcao){
                     case 1:
                         printf("Você escolheu o Bispo!\n");
-                        printf("Quantas casas você quer mover o Bispo? (Máximo 5 casas)\n");
-                        scanf("%d", &casasbispo);
-                            
-                            if (casasbispo < 1 || casasbispo > 5) {
-                                printf("Número de casas inválido! O número deve ser entre 1 e 5.\n");
-                                break;
-                            }
-                            
-                            printf("Qual sentido você quer mover o Bispo?\n");
-                            printf("1. Cima Direita.\n");
-                            printf("2. Cima Esquerda.\n");
-                            scanf("%d", &sentidobispo);
-                            
-                                switch (sentidobispo) {
-                                    case 1:
-                                        for (int i = 0; i < casasbispo; i++) {
-                                            printf("Movendo Cima Direita.\n");
-                                        }
-                                        break;
-                                    case 2:
-                                        for (int i = 0; i < casasbispo; i++) {
-                                            printf("Movendo Cima Esquerda.\n");
-                                        }
-                                        break;
-                                    default:
-                                        printf("Opção inválida!\n");
-                                        break;
-                                }
-                            break;
+                        printf("Movendo 5 casas para Cima Direita!\n");                       
+                            for (int i = 0; i < 5; i++) {
+                                printf("Cima Direita!\n");
+                            }                                                      
+                        break;
                     case 2:
                         printf("Você escolheu a Torre!\n");
+                        printf("Movendo 5 casas a direita!\n");
+                            int t = 1;
+                            while (t <= 5) {
+                                printf("Direita!\n");
+                                t++;
+                            }                           
                         break;
                     case 3:
                         printf("Você escolheu a Rainha!\n");
+                        printf("Movendo 8 casas à esquerda!\n");
+                            int r = 1;
+                            do {
+                                printf("Esquerda!\n");
+                                r++;
+                            } while (r <= 8);
+                            
                         break;
                     case 4:
                         printf("Saindo do jogo!\n");
