@@ -63,9 +63,9 @@
                         {
                             for (int i = 0; i < 2; i++)
                             {
-                                printf("Cima\n");
+                                printf("Baixo!\n");
                             }
-                        printf("Direita\n");                            
+                        printf("Esquerda!\n");                            
                         }
                         printf("\n");
                         break;
